@@ -44,11 +44,11 @@ def hemi_path(
     if flip:
         match axis:
             case Axis.X:
-                ix += r
-                fx += r
-            case Axis.Y:
                 iy += r
                 fy += r
+            case Axis.Y:
+                ix += r
+                fx += r
                 
     # Finally, move the final point
     match axis:
@@ -75,12 +75,22 @@ class Unit(ABC):
     
     @abstractmethod
     def draw(
-        cls,
+        self,
         x_idx: float,
         y_idx: float,
         
     ) -> None:
         pass
+    
+    @abstractmethod
+    @property
+    def width(self) -> float:
+        pass
+    
+@dataclass
+class HalfUnit(Unit):
+
+    ...
 
 
 @dataclass

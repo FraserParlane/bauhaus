@@ -102,7 +102,7 @@ class Bauhaus:
             x_idx=0,
             y_idx=0,
             unit_px=self.unit_dim_px,
-            axis=units.Axis.X,
+            axis=units.Axis.Y,
             offset=units.Offset.POS,
             flip=False,
         )
@@ -132,12 +132,13 @@ class Bauhaus:
 
 if __name__ == '__main__':
     b = Bauhaus(
-        frame_width_in=8 * 12,
-        frame_height_in=3 * 12,
-        unit_dim_in=2,
+        frame_width_in=1,
+        frame_height_in=1,
+        unit_dim_in=1,
         unit_x=16,
         unit_y=16,
         color_background='#E6E0CE',
         file_name='bauhaus',
+        dpi=100
     )
     b.run()
