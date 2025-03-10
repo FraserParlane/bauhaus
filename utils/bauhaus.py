@@ -99,12 +99,12 @@ class Bauhaus:
         )
         
         path_str = units.hemi_path(
-            x_idx=0,
-            y_idx=0,
+            x_idx=1,
+            y_idx=1,
             unit_px=self.unit_dim_px,
             axis=units.Axis.Y,
-            offset=units.Offset.POS,
-            flip=False,
+            offset=True,
+            invert=True,
         )
         
         print(path_str)
@@ -132,8 +132,8 @@ class Bauhaus:
 
 if __name__ == '__main__':
     b = Bauhaus(
-        frame_width_in=1,
-        frame_height_in=1,
+        frame_width_in=2,
+        frame_height_in=2,
         unit_dim_in=1,
         unit_x=16,
         unit_y=16,
